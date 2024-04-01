@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grandparent" id="grandparent">
+
+        <div class="parent" id="parent-1">
+
+            <div class="child" id="child-1">
+
+            </div>
+
+            <div class="child" id="child-2">
+
+            </div>
+
+        </div>
+
+        <div class="parent" id="parent-2">
+
+            <div class="child" id="child-1">
+
+            </div>
+
+            <div class="child" id="child-2">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+       
+
+var childElement = document.querySelector("#child-1");
+function findGrandparent(element) {
+    var currentElement = element;
+    while (currentElement) {
+        if (currentElement.classList.contains("grandparent")) {
+            return currentElement;
+        }
+        currentElement = currentElement.parentNode;
+    }
+    return null; 
+}
+var grandparentElement = findGrandparent(childElement);
+
+if (grandparentElement) {
+    var newParentElement = document.createElement("div");
+    newParentElement.title="I am new parent";
+    newParentElement.className = "parent"; 
+    grandparentElement.appendChild(newParentElement);
+    console.log(grandparentElement.innerHTML);
+}
+
+    </script>
+</body>
+</html>

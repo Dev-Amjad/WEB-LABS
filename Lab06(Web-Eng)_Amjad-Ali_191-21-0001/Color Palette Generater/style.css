@@ -1,0 +1,40 @@
+#container{
+
+    display: flex;
+    border: 1px solid;
+    margin-left: 25%;
+    background-color: rgb(118, 118, 144);
+    border-color: black;
+    width: 90vh;
+    height: 80vh;
+    justify-content: center;
+}
+
+#btn{
+
+    height: 40px;
+    margin-left: 47%;
+    width: 40px;
+    border: 5px solid;
+    background-color: rgb(152, 152, 235);
+
+}
+#btn2{
+
+    height: 40px;
+    margin-left: 47%;
+    width: 40px;
+    border: 5px solid;
+    background-color: rgb(152, 152, 235);
+
+}
+
+.column{
+
+    border: 5px solid;
+    background-color:rgb(218, 152, 152);
+    margin: 2px;
+    border-color: black;
+    height: 78vh;
+    width: 20%;
+}

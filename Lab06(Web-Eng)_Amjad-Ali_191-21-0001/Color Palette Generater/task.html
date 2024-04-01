@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [10000, 2000, 20000, 100000];
+
+        function increment(currentValue,index){
+            let newSalary = 0;
+            if(currentValue > 30000)
+            {  newSalary = currentValue + (currentValue*0.08);
+                arr[index] = newSalary;
+            }
+            else{
+                newSalary = currentValue + (currentValue*0.1);
+                arr[index] = newSalary;
+            }
+        }
+
+        arr.forEach(increment);
+        document.write(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
